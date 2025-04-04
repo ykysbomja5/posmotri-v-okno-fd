@@ -16,6 +16,11 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  display: flex;
+  
+  
+  justify-content: center;
+  align-content: center;
 }
 
 h1,
@@ -48,14 +53,6 @@ ol {
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background-color: #D9D9D9;;
-}
-
-.page {
-  display: flex;
-  
-  
-  justify-content: center;
-  align-content: center;
 }
 
 .visually-hidden {
@@ -112,7 +109,6 @@ ol {
 
 .search-form {
   width: 711px;
-  height: 54px;
   display: flex;
   justify-content: space-between;
 }
@@ -123,15 +119,15 @@ ol {
 }
 
 .search-form__submit-button {
-height: 34px;
 width: 194px;
   margin-top: 20px;
   
 }
 
 .button {
+  height: 34px;
   border-width: 1px;
-  font-family: 'Fira Sans Condensed';
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 17px;
@@ -141,12 +137,17 @@ width: 194px;
   background: transparent;
   border-color: rgb(255, 255, 255);
   cursor: pointer
+  
 }
  
 .more-button {
+  margin-top: 30px;
+  margin-right: 4px;
   height: 34px;
-  width: 399px;
+  width: 390px;
   cursor: pointer
+  
+  
 }
 
 .button:focus-visible {
@@ -222,7 +223,6 @@ margin-bottom: 5px;
 
 .title {
 width: 259px;
-height: 210px;
 font-family: 'Oswald';
 font-style: normal;
 font-weight: 700;
@@ -240,6 +240,7 @@ flex-grow: 0;
 }
 
 .content__card-link {
+  display: block;
   text-decoration: none;
   color: rgb(255, 255, 255);
 }
@@ -272,13 +273,23 @@ order: 1;
 align-self: stretch;
 flex-grow: 0;
 text-overflow: ellipsis;
+
+text-overflow: ellipsis;
+
+white-space: nowrap;
+
+overflow: hidden;
+
 }
 
 .search-form__label {
+  cursor: pointer;
   display: flex;
   flex-direction: row;
   gap: 5px;
   width: fit-content;
+  align-items:center
+  
 }
 
 .search-form__checkbox-list {
@@ -344,19 +355,20 @@ text-overflow: ellipsis;
 .content__card-link:focus {
   outline: none;
 }
-.content__list-item:focus-visible {
-  outline: 1px solid #fff;
-}
 
-.content__list-item:active {
-  background-color: rgb(217 217 217 / 20%);
-}
-
-.content__list-item:last-child {
-  padding-block-end: 42px;
+.content__list-item:not(:last-child) {
+  padding-block-end: 32px;
 }
 
 .content__list {
   overflow-y: auto;
   overflow-x: hidden;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid #fff; 
+}
+
+.content__card-link:active {
+  background-color: rgb(217 217 217 / 20%);
 }
